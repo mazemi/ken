@@ -1,0 +1,4 @@
+files <- list.files("R", pattern = "\\.R$", full.names = TRUE)
+all_funs <- unlist(lapply(files, function(f) {
+  names(getNamespaceExports(source(f, local = TRUE)))
+}))
