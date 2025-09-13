@@ -1,11 +1,38 @@
 Package: ken
 Type: Package
-Title: kobo data cleaning
+Title: Kobo Data Cleaning and Quality Assurance
 Version: 0.1.0
-Author: M.azemi
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: 
+    person("M.", "Azemi", email = "mazemi@gmail.com", role = c("aut", "cre"))
+Description: 
+    Provides comprehensive data cleaning, validation, and quality assurance tools
+    for Kobo Toolbox survey data. Includes functions for downloading data from Kobo,
+    audit log processing, geographic validation, time checks, outlier detection,
+    and automated data quality reporting. Designed for humanitarian and development
+    sector data cleaning workflows.
+License: MIT + file LICENSE
+URL: https://github.com/mazemi/ken
+BugReports: https://github.com/mazemi/ken/issues
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    httr,
+    jsonlite,
+    dplyr,
+    tibble,
+    stringi,
+    lubridate,
+    purrr,
+    geosphere,
+    fs,
+    readr,
+    janitor,
+    openxlsx,
+    readxl,
+    future.apply
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 7.3.1
